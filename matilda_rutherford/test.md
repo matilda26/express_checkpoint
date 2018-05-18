@@ -51,7 +51,7 @@ app.use(bodyParser.urlencoded({extended: true}))
 ```
 
 ```text
-This is handling the HTTP request. The body-parser module parses the JSON, buffer, string and URL encoded data submitted using HTTP POST request. If extended is set to true, it means URL-encoded data will be parsed with the qs library, meaning that it allows you to create a nested object from your query string. 
+This is handling the HTTP request. The body-parser module parses the JSON, buffer, string and URL encoded data submitted using HTTP POST request. If extended is set to true, it means URL-encoded data will be parsed with the qs library, meaning that it allows you to create a nested object from your query string.
 ```
 
 ### Question 5
@@ -70,8 +70,33 @@ It should have the following methods...
 The `BankAccount` class has a `transactionHistory` property which keeps track of the withdrawals and deposits made to the account.
 * Make sure to indicate whether the transaction increased or decreased the amount of money in the bank.
 
-```text
-Your answer...
+```js
+class BankAccount {
+
+  constructor(type) {
+    this.type = type
+    this.balance = 0
+    this.transactionHistory = []
+  }
+
+  withdraw(num) {
+    this.transactionHistory.push("withdraw " + (this.balance - num))
+    this.balance = this.balance - num
+  }
+
+  deposit(num) {
+    this.transactionHistory.push("deposit " + (this.balance + num))
+    this.balance = this.balance + num
+  }
+
+  showBalance() {
+    console.log(this.balance);
+  }
+
+}
+
+var newAcc = new BankAccount('checking')
+
 ```
 
 Create an instance of the BankAccount class
