@@ -37,7 +37,7 @@ app.route('/home')
 Describe the differences between Express and Rails as backend frameworks.
 
 ```text
-Your answer...
+Express is JS, Rails is Ruby. Express is unopinionated, ruby is very opinionated. Express is asynchronous. 
 ```
 
 ### Question 4
