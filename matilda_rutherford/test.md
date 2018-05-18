@@ -16,7 +16,19 @@ Then, make each route respond with a one-word string containing the RESTful acti
 var express = require("express")
 var app = express()
 
-// Your code starts here...
+app.route('/home')
+  .get(function (req, res) {
+    res.send('GET')
+  })
+  .post(function (req, res) {
+    res.send('POST')
+  })
+  .put(function (req, res) {
+    res.send('PUT')
+  })
+  .delete(function (req, res) {
+    res.send('DELETE')
+  })
 
 ```
 
