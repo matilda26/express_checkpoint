@@ -37,7 +37,7 @@ app.route('/home')
 Describe the differences between Express and Rails as backend frameworks.
 
 ```text
-Express is JS, Rails is Ruby. Express is unopinionated, ruby is very opinionated. Express is asynchronous. 
+Express is JS, Rails is Ruby. Express is unopinionated, ruby is very opinionated. Express is asynchronous.
 ```
 
 ### Question 4
@@ -51,7 +51,7 @@ app.use(bodyParser.urlencoded({extended: true}))
 ```
 
 ```text
-Your answer...
+This is handling the HTTP request. The body-parser module parses the JSON, buffer, string and URL encoded data submitted using HTTP POST request. If extended is set to true, it means URL-encoded data will be parsed with the qs library, meaning that it allows you to create a nested object from your query string. 
 ```
 
 ### Question 5
